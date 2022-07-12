@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { IgxButtonModule } from 'igniteui-angular';
 
 @NgModule({
   declarations: [
@@ -17,22 +18,23 @@ import { NgxSpinnerModule } from "ngx-spinner";
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    BrowserAnimationsModule, // required animations module
+    BrowserAnimationsModule,
     ToastrModule.forRoot(// ToastrModule added
-  {
-    timeOut:4000,
-    progressBar:true,
-    easing:"ease-in",
-    closeButton:false,
-    progressAnimation:"decreasing",
-    preventDuplicates:true,
-    positionClass:"toast-bottom-left"
-  }
-    ), 
-    NgxSpinnerModule
+      {
+        timeOut: 4000,
+        progressBar: true,
+        easing: "ease-in",
+        closeButton: false,
+        progressAnimation: "decreasing",
+        preventDuplicates: true,
+        positionClass: "toast-bottom-left"
+      }),
+    NgxSpinnerModule,
+    IgxButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}
